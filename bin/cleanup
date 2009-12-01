@@ -12,6 +12,8 @@ for path in os.listdir(os.getcwd()):
         paths_to_kill.append(path)
     elif re.match('.*#$',path) is not None:
         paths_to_kill.append(path)
+    elif re.match('.*~$',path) is not None:
+        paths_to_kill.append(path)
 
 for path in paths_to_kill:
     print "Removing: %s" % path
